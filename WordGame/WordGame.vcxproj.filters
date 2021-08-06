@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="头文件\Model">
+      <UniqueIdentifier>{f92df019-2c58-49d8-bb68-cfeb14800ea7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\View">
+      <UniqueIdentifier>{9fe930eb-e332-45eb-bb42-309abe47adfb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Control">
+      <UniqueIdentifier>{0d284099-8757-4a33-b060-76300a53afa0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Util">
+      <UniqueIdentifier>{babb98ce-efa5-4582-af35-2e8f660043e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Model">
+      <UniqueIdentifier>{89450aad-356f-4e7d-80c0-b73463950ff9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\View">
+      <UniqueIdentifier>{af1dd6a8-0ff7-4aa1-94e9-1dffc8716b5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Control">
+      <UniqueIdentifier>{ca4a8bf2-eab6-4baa-a560-eedf06f0c0c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Util">
+      <UniqueIdentifier>{e863b924-2d80-40aa-abf3-e2e438b4c88e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="BlackMarket.cpp">
+      <Filter>源文件\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="GameController.cpp">
+      <Filter>源文件\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="GameGood.cpp">
+      <Filter>源文件\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="GameCore.cpp">
+      <Filter>源文件\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="GameInfoView.cpp">
+      <Filter>源文件\View</Filter>
+    </ClCompile>
+    <ClCompile Include="GameMainView.cpp">
+      <Filter>源文件\View</Filter>
+    </ClCompile>
+    <ClCompile Include="GamePlace.cpp">
+      <Filter>源文件\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="GameRole.cpp">
+      <Filter>源文件\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="GameWorld.cpp">
+      <Filter>源文件\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="MarketView.cpp">
+      <Filter>源文件\View</Filter>
+    </ClCompile>
+    <ClCompile Include="RandomUtill.cpp">
+      <Filter>源文件\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundController.cpp">
+      <Filter>源文件\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="Station.cpp">
+      <Filter>源文件\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="StationView.cpp">
+      <Filter>源文件\View</Filter>
+    </ClCompile>
+    <ClCompile Include="Viewer.cpp">
+      <Filter>源文件\View</Filter>
+    </ClCompile>
+    <ClCompile Include="EventController.cpp">
+      <Filter>源文件\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="Message.cpp">
+      <Filter>源文件\Model</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BlackMarket.h">
+      <Filter>头文件\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="GameController.h">
+      <Filter>头文件\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="GameCore.h">
+      <Filter>头文件\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="GameGood.h">
+      <Filter>头文件\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="GameInfoView.h">
+      <Filter>头文件\View</Filter>
+    </ClInclude>
+    <ClInclude Include="GameMainView.h">
+      <Filter>头文件\View</Filter>
+    </ClInclude>
+    <ClInclude Include="GamePlace.h">
+      <Filter>头文件\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="GameRole.h">
+      <Filter>头文件\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="GameWorld.h">
+      <Filter>头文件\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="MarketView.h">
+      <Filter>头文件\View</Filter>
+    </ClInclude>
+    <ClInclude Include="RandomUtill.h">
+      <Filter>头文件\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundController.h">
+      <Filter>头文件\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="Station.h">
+      <Filter>头文件\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="Viewer.h">
+      <Filter>头文件\View</Filter>
+    </ClInclude>
+    <ClInclude Include="StationView.h">
+      <Filter>头文件\View</Filter>
+    </ClInclude>
+    <ClInclude Include="EventController.h">
+      <Filter>头文件\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="Message.h">
+      <Filter>头文件\Model</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
