@@ -2,8 +2,8 @@
 
 #include <tchar.h>
 #include <sstream>
-#include<windows.h>//一定要放在前面
-#include<Mmsystem.h>
+#include <windows.h>//一定要放在前面
+#include <Mmsystem.h>
 #pragma comment(lib,"winmm.lib")
 using namespace std;
 
@@ -13,9 +13,8 @@ class SoundController
 public:
 	SoundController();
 	virtual ~SoundController();
-
-	//单例的实现
 	static SoundController* GetInstance();
+
 	//播放音效
 	void PlaySoundEffect(int id);
 	//停止播放音效
@@ -26,11 +25,11 @@ public:
 	void StopBGM();
 	//停止所有声音播放
 	void StopAll();
+	//声音转换
+	void SoundTransform();
 
-	//获取声音状态
-	bool GetSilence();
-	//设置是否静音
-	void SetSilence(bool silence);
+	bool GetSilence() { return this->prt_silence; }
+	void SetSilence(bool silence) { this->prt_silence = silence; }
 protected:
 private:
 	static SoundController* instance;

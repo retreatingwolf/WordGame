@@ -36,7 +36,6 @@ void SoundController::PlayBGM()
 void SoundController::StopBGM()
 {
 	PlaySound(TEXT(NULL), NULL, SND_FILENAME);
-
 }
 
 void SoundController::PlaySoundEffect(int id)
@@ -70,12 +69,16 @@ void SoundController::StopAll()
 	this->StopBGM();
 }
 
-bool SoundController::GetSilence()
+void SoundController::SoundTransform()
 {
-	return this->prt_silence;
-}
-
-void SoundController::SetSilence(bool silence)
-{
-	this->prt_silence = silence;
+	this->SetSilence(!this->GetSilence());//此处是先改变状态再播放
+	if (this->GetSilence())
+	{
+		this->StopAll();
+	}
+	else
+	{
+		this->PlayBGM();
+		//this->PlaySoundEffect(1);
+	}
 }

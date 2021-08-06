@@ -11,7 +11,6 @@ public:
 	//显示游戏主界面
 	void Show()override;
 protected:
-	
 private:
 	//游戏功能选择
 	void ShowFuncChoice();

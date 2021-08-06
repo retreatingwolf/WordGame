@@ -70,11 +70,10 @@ void Viewer::PlayTypewrite(string line)
 
 		Sleep(speed);
 	}
-	
 	cout << endl;
 }
 
-void Viewer::ShowSystemMenu()
+void Viewer::ShowMainMenu()
 {
 	//菜单项
 	vector<string> itemNames;
@@ -84,9 +83,9 @@ void Viewer::ShowSystemMenu()
 
 	switch (this->ChooseMenuItem("欢迎来到都市浮生记！",itemNames))
 	{
-	case 1://系统菜单
+	case 1://系统
 	{
-		this->ShowSystemMenuItem();
+		this->ShowSystemMenu();
 	}break;
 	case 2://场景
 	{
@@ -99,14 +98,15 @@ void Viewer::ShowSystemMenu()
 	}
 }
 
-void Viewer::ShowSystemMenuItem()
+void Viewer::ShowSystemMenu()
 {
 	system("cls");
 	//菜单项
 	vector<string> itemNames;
 	itemNames.push_back("新游戏");
-	itemNames.push_back("高手排行榜");
-	itemNames.push_back("游戏设置");
+	itemNames.push_back("排行榜");
+	itemNames.push_back("设置");
+	itemNames.push_back("返回");
 	itemNames.push_back("退出游戏");
 
 	switch (this->ChooseMenuItem("系统菜单",itemNames))
@@ -125,7 +125,12 @@ void Viewer::ShowSystemMenuItem()
 		system("cls");
 		this->ShowSettingMenu();
 	}break;
-	case 4://退出游戏
+	case 4://返回上一级
+	{
+		system("cls");
+		this->ShowMainMenu();
+	}break;
+	case 5://退出游戏
 	{
 		system("cls");
 		cout << "欢迎下次游玩" << endl;
@@ -161,22 +166,13 @@ void Viewer::ShowSettingMenu()
 	case 2://声音设置
 	{
 		system("cls");
-		sound->SetSilence(!silence);//此处是先改变状态再播放
-		if (silence)
-		{
-			sound->PlayBGM();
-			//sound->PlaySoundEffect(1);
-		}
-		else
-		{
-			sound->StopAll();
-		}
+		sound->SoundTransform();
 		this->ShowSettingMenu();
 	}break;
 	case 3://返回
 	{
 		system("cls");
-		this->ShowSystemMenuItem();//调用之前的界面
+		this->ShowSystemMenu();//调用之前的界面
 	}break;
 	}
 }
@@ -205,7 +201,6 @@ void Viewer::StartGame()
 	{
 		this->prt_mainView = new GameMainView();
 	}
-	//system("cls");
 	this->prt_mainView->Show();
 }
 
