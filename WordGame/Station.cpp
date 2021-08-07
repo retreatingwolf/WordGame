@@ -5,10 +5,11 @@ Station::Station()
 	this->prt_name = "";
 	this->prt_market = nullptr;
 }
-Station::~Station()
-{//黑市和火车站共存亡
+Station::~Station()//何时调用？
+{//黑市和地铁站共存亡
 	if (this->prt_market != nullptr)
 	{
+		cout << "黑市消失" << endl;
 		delete this->prt_market;
 		this->prt_market = nullptr;
 	}

@@ -179,6 +179,7 @@
     <ClInclude Include="GameWorld.h" />
     <ClInclude Include="MarketView.h" />
     <ClInclude Include="Message.h" />
+    <ClInclude Include="Parameter.h" />
     <ClInclude Include="RandomUtill.h" />
     <ClInclude Include="SoundController.h" />
     <ClInclude Include="Station.h" />

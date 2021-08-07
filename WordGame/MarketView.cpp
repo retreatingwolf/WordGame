@@ -1,4 +1,5 @@
 #include "MarketView.h"
+#include "Parameter.h"
 
 MarketView::MarketView()
 {
@@ -63,16 +64,16 @@ void MarketView::UpdateShowList(BlackMarket* market)
 	cout << endl;
 
 	//玩家拥有货物显示（出租屋列表显示）
-	auto role = GameWorld::GetInstance()->GetGameRole();
+	GameRole* role = GameWorld::GetInstance()->GetGameRole();
 	cout << endl << "您的仓库(库存：" << role->GetCurrentStore() << "/" << role->GetMaxStore() << ")" << endl;
-	int number = role->GetGameGood()->size();
+	int number = role->GetStoreGood()->size();
 	if (number == 0)
 	{//玩家没有物品的情况
 		cout << "空无一物" << endl;
 	}
 	else
 	{
-		for (auto good : *role->GetGameGood())
+		for (auto good : *role->GetStoreGood())
 		{
 			//拼接货物信息
 			stringstream str;
@@ -119,23 +120,23 @@ void MarketView::ShowMenu()
 		//对黑市商品数据进行操作
 		switch (this->prt_market->Sell(goodId, goodNum))
 		{
-		case 0://当前黑市不存在该商品
+		case COMMODITY_NOT_FOUND://当前黑市不存在该商品
 		{
 			cout << "商品断货！" << endl;
 		}break;
-		case 1://商品数量不足无法购买
+		case GOOD_AMOUNT_NOT_ENOUGH://商品数量不足无法购买
 		{
 			cout << "商品不足！" << endl;
 		}break;
-		case 2://购买成功
+		case SUCCESSFUL_SELL://购买成功
 		{
 			cout << "交易成功！" << endl;
 		}break;
-		case 3://玩家现金不足的情况
+		case MONEY_AMOUNT_NOT_ENOUGH://玩家现金不足的情况
 		{
 			cout << "您的钱不够！" << endl;
 		}break;
-		case 4://仓库容量不够
+		case STORE_AMOUNT_NOT_ENOUGH://仓库容量不够
 		{
 			cout << "您的出租屋放不下了！" << endl;
 		}break;
@@ -174,15 +175,15 @@ void MarketView::ShowMenu()
 			int errorcode = GameWorld::GetInstance()->GetGameRole()->Sell(commodity, goodNum);
 			switch (errorcode)
 			{
-			case 0://仓库不存在该物品
+			case COMMODITY_NOT_FOUND://仓库不存在该物品
 			{
 				cout << "您仓库中没有该商品" << endl;
 			}break;
-			case 1://货物数量不足
+			case GOOD_AMOUNT_NOT_ENOUGH://货物数量不足
 			{
 				cout << "您仓库中货物不足" << endl;
 			}break;
-			case 2://交易成功
+			case SUCCESSFUL_SELL://交易成功
 			{
 				cout << "交易成功" << endl;
 			}break;

@@ -1,4 +1,5 @@
 #include "GameGood.h"
+
 GameGood::GameGood()
 {
 	this->prt_id = 0;
@@ -9,7 +10,6 @@ GameGood::GameGood()
 	this->prt_maxPrice = 0;
 	this->prt_count = 0;
 }
-
 GameGood::~GameGood()
 {
 

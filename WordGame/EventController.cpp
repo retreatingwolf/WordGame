@@ -67,7 +67,7 @@ void EventController::PlayMessage(int id)
 			int goodsId = currMessage->GetGoodsID();
 			auto role = world->GetGameRole();
 			auto allGoods = world->GetGameGoods();
-			auto storeGoods = role->GetGameGood();
+			auto storeGoods = role->GetStoreGood();
 			//通过编号查找货物
 			GameGood* gameGood = nullptr;
 			for (auto store : *storeGoods)

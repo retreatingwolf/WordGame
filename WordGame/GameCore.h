@@ -6,9 +6,7 @@
 #include "EventController.h"
 #include <iostream>
 using namespace std;
-#define BANK_RATES 0.05
-#define DEBT_RATES 0.1
-#define COMMODITY_NUM 20
+
 /*游戏内核*/
 //游戏的开始和结束
 class GameCore

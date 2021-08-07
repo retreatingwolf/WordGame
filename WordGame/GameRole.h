@@ -2,7 +2,7 @@
 #include "GameGood.h"
 #include <vector>
 using namespace std;
-//游戏角色数据模型，包含游戏角色的基本属性
+//游戏角色数据模型
 class GameRole
 {
 public:
@@ -23,7 +23,7 @@ public:
 	int GetMaxStore() { return this->prt_maxStore; }
 	void SetMaxStore(int val) { this->prt_maxStore = val; }
 	//获取出租屋的物品
-	vector<GameGood*>* GetGameGood() { return &this->prt_goods; }
+	vector<GameGood*>* GetStoreGood() { return &this->prt_storeGoods; }
 	//游戏角色出售商品
 	int Sell(GameGood* commodity, int amounts);
 protected:
@@ -35,7 +35,7 @@ private:
 	int prt_fame;
 
 	//记录玩家出租屋中的货物（在哪里设置？）
-	vector<GameGood*> prt_goods;
+	vector<GameGood*> prt_storeGoods;
 	//当前库存数量
 	int prt_currentStore;
 	//最大库存数量

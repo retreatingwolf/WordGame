@@ -15,9 +15,10 @@ GameInfoView::~GameInfoView()
 void GameInfoView::Show()
 {
 	system("cls");
-	auto world = GameWorld::GetInstance();
+	GameWorld* world = GameWorld::GetInstance();
 	this->prt_CurrentDay = world->GetCurrentDay();
 	this->prt_MaxDay = world->GetMaxDay();
+
 	this->prt_role = world->GetGameRole();
 	//1.显示时间
 	this->ShowDay();
@@ -50,11 +51,9 @@ void GameInfoView::ShowEvent()
 		cout << "-";
 	}
 	cout << endl;
-
 	//消息
 	cout << "今日事件" << endl;
 	cout << message->GetContent() << endl;
-
 	//最后一行分隔符
 	for (int i = 0; i < width; i++)
 	{
@@ -65,6 +64,7 @@ void GameInfoView::ShowEvent()
 
 void GameInfoView::ShowRoleInfo()
 {
+	GameRole* role = GameWorld::GetInstance()->GetGameRole();
 	//绘制玩家信息的边框
 	int width = 60;
 	//第一行分隔符
@@ -73,10 +73,8 @@ void GameInfoView::ShowRoleInfo()
 		cout << "*"; 
 	}
 	cout << endl;
-
 	//标题信息特殊处理
 	cout << "*\t\t\t玩家信息\t\t\t   *" << endl;
-
 	//共五个人物属性，加上标题共六行
 	vector<string> infos;
 	infos.push_back(this->ShowFormatForRoleProp(1, "现金", this->prt_role->GetCash(), "元"));
@@ -96,7 +94,6 @@ void GameInfoView::ShowRoleInfo()
 		}
 		cout << "*" << endl;
 	}
-
 	//最后一行分隔符
 	for (int i = 0; i < width; i++)
 	{

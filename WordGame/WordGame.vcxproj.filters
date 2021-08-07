@@ -146,5 +146,8 @@
     <ClInclude Include="Message.h">
       <Filter>头文件\Model</Filter>
     </ClInclude>
+    <ClInclude Include="Parameter.h">
+      <Filter>头文件\Util</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

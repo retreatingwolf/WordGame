@@ -15,8 +15,7 @@ public:
 	GameInfoView();
 	virtual ~GameInfoView();
 protected://由于需要继承操作，show函数放在此处
-	//显示
-	virtual void Show();
+	virtual void Show();//显示
 private:
 	//此处的时间和GameWorld中的时间是不一样的
 	int prt_CurrentDay;
@@ -30,7 +29,7 @@ private:
 	void ShowRoleInfo();
 	//角色属性显示格式
 	string ShowFormatForRoleProp(int id, string name, int value, string unit = "");
-	//角色数据
+	//角色数据(不明白为什么要这样)
 	GameRole* prt_role;
 };
 
