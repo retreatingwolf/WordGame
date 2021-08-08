@@ -1,5 +1,7 @@
 #pragma once
 #include "GameGood.h"
+#include "Bank.h"
+#include <iostream>
 #include <vector>
 using namespace std;
 //游戏角色数据模型
@@ -26,6 +28,8 @@ public:
 	vector<GameGood*>* GetStoreGood() { return &this->prt_storeGoods; }
 	//游戏角色出售商品
 	int Sell(GameGood* commodity, int amounts);
+	//角色取钱
+	int ReceiveDeposit();
 protected:
 private:
 	int prt_cash;

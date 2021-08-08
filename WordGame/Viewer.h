@@ -6,6 +6,7 @@
 #include "GameCore.h"
 #include "SoundController.h"
 #include "GameMainView.h"
+#include "Bank.h"
 using namespace std;
 
 /*视图类，综合控制了所有该给用户显示的东西，同时要调用model中提供的数据借口*/

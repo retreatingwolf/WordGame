@@ -93,6 +93,12 @@
     <ClCompile Include="Message.cpp">
       <Filter>源文件\Model</Filter>
     </ClCompile>
+    <ClCompile Include="BankView.cpp">
+      <Filter>源文件\View</Filter>
+    </ClCompile>
+    <ClCompile Include="Bank.cpp">
+      <Filter>源文件\Model</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BlackMarket.h">
@@ -148,6 +154,12 @@
     </ClInclude>
     <ClInclude Include="Parameter.h">
       <Filter>头文件\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Bank.h">
+      <Filter>头文件\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="BankView.h">
+      <Filter>头文件\View</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

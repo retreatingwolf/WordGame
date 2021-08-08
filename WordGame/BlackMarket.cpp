@@ -87,7 +87,6 @@ int BlackMarket::Sell(int id, int amounts)
 				}
 				return SUCCESSFUL_SELL;
 			}
-		
 		}
 	}
 }

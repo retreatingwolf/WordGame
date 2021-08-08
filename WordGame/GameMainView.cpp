@@ -1,6 +1,7 @@
 #include "GameMainView.h" 
 #include "Viewer.h"//此头文件只能在此处导入，避免出现循环导入的后果
 #include "StationView.h"
+#include "BankView.h"
 
 GameMainView::GameMainView()
 {
@@ -14,13 +15,13 @@ GameMainView::~GameMainView()
 void GameMainView::Show()
 {
 	GameInfoView::Show();
-	//显示游戏功能选择界面
+	//显示游戏场景选择界面
 	this->ShowFuncChoice();
 }
 
 void GameMainView::ShowFuncChoice()
 {
-	auto world = GameWorld::GetInstance();//单例模式的便捷之处！任何地方都可以取值（取得整个世界）
+	GameWorld* world = GameWorld::GetInstance();//单例模式的便捷之处！任何地方都可以取值（取得整个世界）
 	//获取功能项名称
 	vector<string> items;
 	for (auto place : *world->GetGamePlaces())
@@ -43,7 +44,9 @@ void GameMainView::ShowFuncChoice()
 	}return;
 	case 2://银行
 	{
-
+		BankView* bankView = new BankView();
+		bankView->Show();
+		delete bankView;
 	}break;
 	case 3://邮局
 	{
@@ -72,8 +75,9 @@ void GameMainView::ShowFuncChoice()
 	case 9://结束游戏
 	default://乱选也退出游戏
 	{
+		cout << "是否保存游戏进度？" << endl;
+		//提供一个保存接口
 		exit(0);
 	}
-		break;
 	}
 }

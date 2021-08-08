@@ -8,6 +8,7 @@ GameWorld::GameWorld()
 	this->prt_CurrentDay = 0;
 	this->prt_MaxDay = GAME_MAXDAY;
 	this->prt_role = nullptr;
+	this->prt_bank = nullptr;
 
 	/*初始化游戏场景*/
 	string placeNames[] = { "地铁站","银行","邮局","医院","机场","租房中介","网吧" };
@@ -103,5 +104,14 @@ GameRole* GameWorld::GetGameRole()
 	{
 		this->prt_role = new GameRole();
 	}
-	return prt_role;
+	return this->prt_role;
+}
+
+Bank* GameWorld::GetBank()
+{
+	if (this->prt_bank == nullptr)
+	{
+		this->prt_bank = new Bank();
+	}
+	return this->prt_bank;
 }

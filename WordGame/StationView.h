@@ -10,7 +10,7 @@ public:
 	StationView();
 	virtual ~StationView();
 
-	void Show()override; 
+	void Show() override; 
 protected:
 private:
 	//显示地铁示意图

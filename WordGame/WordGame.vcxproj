@@ -139,6 +139,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Bank.cpp" />
+    <ClCompile Include="BankView.cpp" />
     <ClCompile Include="BlackMarket.cpp" />
     <ClCompile Include="EventController.cpp" />
     <ClCompile Include="GameController.cpp" />
@@ -163,6 +165,8 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Bank.h" />
+    <ClInclude Include="BankView.h" />
     <ClInclude Include="BlackMarket.h" />
     <ClInclude Include="EventController.h" />
     <ClInclude Include="GameController.h" />

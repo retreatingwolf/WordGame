@@ -19,7 +19,7 @@ void GameInfoView::Show()
 	this->prt_CurrentDay = world->GetCurrentDay();
 	this->prt_MaxDay = world->GetMaxDay();
 
-	this->prt_role = world->GetGameRole();
+	this->prt_role = world->GetGameRole();//类属性居然在这里初始化了
 	//1.显示时间
 	this->ShowDay();
 	//2.显示随机事件
@@ -64,7 +64,7 @@ void GameInfoView::ShowEvent()
 
 void GameInfoView::ShowRoleInfo()
 {
-	GameRole* role = GameWorld::GetInstance()->GetGameRole();
+	//GameRole* role = GameWorld::GetInstance()->GetGameRole();
 	//绘制玩家信息的边框
 	int width = 60;
 	//第一行分隔符

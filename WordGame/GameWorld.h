@@ -5,6 +5,7 @@
 #include "GameGood.h"
 #include "Station.h"
 #include "Message.h"
+#include "Bank.h"
 
 #include <vector>
 #include <map>
@@ -29,6 +30,8 @@ public:
 
 	//获取游戏角色
 	GameRole* GetGameRole();
+	//获取银行
+	Bank* GetBank();
 	//获取所有游戏场景
 	vector<GamePlace*>* GetGamePlaces() { return &this->prt_places; }
 	//获取所有的游戏物品
@@ -58,9 +61,12 @@ private:
 	map<int, GameGood*> prt_goods;
 	//地铁站的集合
 	vector<Station*> prt_stations;
+	//银行
+	Bank* prt_bank;
 	//事件的集合
 	map<int, Message*> prt_messages;
 	//记录当前触发的消息
 	Message* prt_CurrentMessage;
+
 };
 

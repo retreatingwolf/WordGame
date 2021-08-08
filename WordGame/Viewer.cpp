@@ -104,6 +104,7 @@ void Viewer::ShowSystemMenu()
 	//菜单项
 	vector<string> itemNames;
 	itemNames.push_back("新游戏");
+	itemNames.push_back("继续游戏");
 	itemNames.push_back("排行榜");
 	itemNames.push_back("设置");
 	itemNames.push_back("返回");
@@ -116,25 +117,28 @@ void Viewer::ShowSystemMenu()
 		system("cls");
 		GameCore::GetInstance()->GameStart();
 	}break;
-	case 2://高手排行榜
+	case 2://继续游戏
 	{
 
 	}break;
-	case 3://游戏设置
+	case 3://高手排行榜
+	{
+
+	}break;
+	case 4://游戏设置
 	{
 		system("cls");
 		this->ShowSettingMenu();
 	}break;
-	case 4://返回上一级
+	case 5://返回上一级
 	{
 		system("cls");
 		this->ShowMainMenu();
 	}break;
-	case 5://退出游戏
+	case 6://退出游戏
 	{
 		system("cls");
 		cout << "欢迎下次游玩" << endl;
-		exit(0);
 	}break;
 	}
 }
@@ -143,9 +147,19 @@ void Viewer::ShowSettingMenu()
 {
 	//菜单项
 	vector<string> itemNames;
-	itemNames.push_back("允许黑客攻击银行网络");
+	//此处要判断是否开启黑客模式
+	Bank* bank = GameWorld::GetInstance()->GetBank();
+	bool isHacker = bank->GetHacker();
+	if (isHacker)
+	{
+		itemNames.push_back("不允许黑客攻击银行网络");
+	}
+	else
+	{
+		itemNames.push_back("允许黑客攻击银行网络");
+	}
 	//此处要判断音效是否开启
-	auto sound = SoundController::GetInstance();
+	SoundController* sound = SoundController::GetInstance();
 	bool silence = sound->GetSilence();
 	if (silence)
 	{
@@ -161,7 +175,9 @@ void Viewer::ShowSettingMenu()
 	{
 	case 1://允许黑客攻击银行网络
 	{
-		
+		system("cls");
+		bank->SetHacker(!bank->GetHacker());
+		this->ShowSettingMenu();
 	}break;
 	case 2://声音设置
 	{

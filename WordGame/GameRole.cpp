@@ -69,3 +69,20 @@ int GameRole::Sell(GameGood* commodity, int amounts)
 		}
 	}
 }
+
+int GameRole::ReceiveDeposit()
+{
+	cout << "请输入要取的钱:" ;
+	int money;
+	cin >> money;
+	if (this->GetDeposit() < money || money<=0)
+	{
+		return DEPOSIT_NOT_ENOUGH;
+	}
+	else
+	{
+		this->SetDeposit(this->GetDeposit()-money);
+		this->SetCash(this->GetCash() + money);
+		return SUCCESSFUL_RECEIVE;
+	}
+}

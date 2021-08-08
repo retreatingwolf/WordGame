@@ -23,7 +23,7 @@ GameController* GameController::GetInstance()
 void GameController::GameStart()
 {
 	//开场背景音乐播放
-	SoundController::GetInstance()->PlayBGM();
+	//SoundController::GetInstance()->PlayBGM();
 	//开场剧情动画播放
 	//Viewer::GetInstace()->ShowStory();
 	//系统菜单的展示

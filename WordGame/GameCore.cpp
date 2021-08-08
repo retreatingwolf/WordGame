@@ -51,7 +51,7 @@ void GameCore::LogicUpdate()
 	{//每天会有固定的数值变化
 		//天数变化
 		world->SetCurrentDay(world->GetCurrentDay() + 1);
-		//存款变化
+		//存款变化(若存款太少会没有利息)
 		role->SetDeposit((int)(role->GetDeposit() * (1 + BANK_RATES)));
 		//债务变化
 		role->SetDebt((int)(role->GetDebt() * (1 + DEBT_RATES)));
@@ -59,10 +59,21 @@ void GameCore::LogicUpdate()
 		//将消息重置
 		GameWorld::GetInstance()->SetCurrentMessage(nullptr);
 		//触发事件(触发概率50%)
-		if (RandomUtill::GetProbabilityResult(50))
+		if (RandomUtill::GetProbabilityResult(EVENT_HAPPEN_PROBABILITY))
 		{//成功触发事件
 			int id = RandomUtill::GetRandomInteger(1, world->GetMessages()->size());
 			EventController::GetInstance()->PlayMessage(id);
+		}
+
+		//黑客攻击银行
+		Bank* bank = world->GetBank();
+		bank->SetAttacked(false);
+		if (bank->GetHacker() == true)
+		{
+			if (RandomUtill::GetProbabilityResult(HACKER_ATTACK_PROBABILITY))
+			{
+				bank->SetAttacked(true);
+			}
 		}
 		
 		//（以下二者的刷新会很复杂，考虑封装一个方法来实现）
