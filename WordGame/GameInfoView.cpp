@@ -34,6 +34,10 @@ void GameInfoView::ShowDay()
 	{
 		cout << "欢迎开启都市之旅" << endl;
 	}
+	else
+	{
+		cout << "又是新的一天，您满怀希望的走出家门" << endl;
+	}
 	cout << "第" << this->prt_CurrentDay << "天 " << "共" << this->prt_MaxDay << "天" << endl;
 }
 

@@ -6,7 +6,14 @@
 #define INIT_DEPOSIT 0
 #define INIT_HP 100
 #define INIT_FAME 100
-#define INIT_MAXSTORAGE 100
+#define INIT_MAXSTORAGE 20
+
+enum MyEnum
+{
+	NO_BED = 3,
+	RICE_STRAW_BED = 2,
+	SECON_DHAND_BED = 1
+};
 
 #define BANK_RATES 0.05
 #define DEBT_RATES 0.1

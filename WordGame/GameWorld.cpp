@@ -9,9 +9,10 @@ GameWorld::GameWorld()
 	this->prt_MaxDay = GAME_MAXDAY;
 	this->prt_role = nullptr;
 	this->prt_bank = nullptr;
+	this->prt_house = nullptr;
 
 	/*初始化游戏场景*/
-	string placeNames[] = { "地铁站","银行","邮局","医院","机场","租房中介","网吧" };
+	string placeNames[] = { "地铁站","银行","邮局","医院","机场","家具城","网吧","出租屋" };
 	for (int i = 0; i < sizeof(placeNames) / sizeof(*placeNames); i++)
 	{//此循环条件注意，此循环初始化方法注意
 		GamePlace* place = new GamePlace(); 
@@ -114,4 +115,13 @@ Bank* GameWorld::GetBank()
 		this->prt_bank = new Bank();
 	}
 	return this->prt_bank;
+}
+
+House* GameWorld::GetHouse()
+{
+	if (this->prt_house == nullptr)
+	{
+		this->prt_house = new House();
+	}
+	return this->prt_house;
 }

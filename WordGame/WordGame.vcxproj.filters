@@ -99,6 +99,12 @@
     <ClCompile Include="Bank.cpp">
       <Filter>源文件\Model</Filter>
     </ClCompile>
+    <ClCompile Include="House.cpp">
+      <Filter>源文件\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="HouseView.cpp">
+      <Filter>源文件\View</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BlackMarket.h">
@@ -159,6 +165,12 @@
       <Filter>头文件\Model</Filter>
     </ClInclude>
     <ClInclude Include="BankView.h">
+      <Filter>头文件\View</Filter>
+    </ClInclude>
+    <ClInclude Include="House.h">
+      <Filter>头文件\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="HouseView.h">
       <Filter>头文件\View</Filter>
     </ClInclude>
   </ItemGroup>

@@ -2,6 +2,7 @@
 #include "Viewer.h"//此头文件只能在此处导入，避免出现循环导入的后果
 #include "StationView.h"
 #include "BankView.h"
+#include "HouseView.h"
 
 GameMainView::GameMainView()
 {
@@ -30,14 +31,13 @@ void GameMainView::ShowFuncChoice()
 	}
 
 	//对item进行补充
-	items.push_back("开始新的一天");
+	/*items.push_back("开始新的一天");*/
 	items.push_back("结束游戏");
 
 	switch (Viewer::ChooseMenuItem("城市地面示意图", items))
 	{
 	case 1://地铁站
 	{
-		//system("cls");
 		StationView* stationView = new StationView();
 		stationView->Show();
 		delete stationView;
@@ -60,7 +60,7 @@ void GameMainView::ShowFuncChoice()
 	{
 
 	}break;
-	case 6://租房中介 
+	case 6://家具城
 	{
 
 	}break;
@@ -68,9 +68,11 @@ void GameMainView::ShowFuncChoice()
 	{
 
 	}break;
-	case 8://新的一天
+	case 8://出租屋
 	{
-		return;
+		HouseView* houseView = new HouseView();
+		houseView->Show();
+		delete houseView;
 	}break;
 	case 9://结束游戏
 	default://乱选也退出游戏

@@ -47,6 +47,7 @@ void GameCore::LogicUpdate()
 	//获取游戏世界数据
 	GameWorld* world = GameWorld::GetInstance();
 	GameRole* role = world->GetGameRole();
+	House* house = world->GetHouse();
 	if (world->GetCurrentDay() <= world->GetMaxDay())
 	{//每天会有固定的数值变化
 		//天数变化
@@ -55,6 +56,8 @@ void GameCore::LogicUpdate()
 		role->SetDeposit((int)(role->GetDeposit() * (1 + BANK_RATES)));
 		//债务变化
 		role->SetDebt((int)(role->GetDebt() * (1 + DEBT_RATES)));
+		//健康值变化
+		role->SetHP(role->GetHP() - house->GetComfortLevel());
 
 		//将消息重置
 		GameWorld::GetInstance()->SetCurrentMessage(nullptr);

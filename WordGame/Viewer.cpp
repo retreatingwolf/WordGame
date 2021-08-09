@@ -121,7 +121,7 @@ void Viewer::ShowSystemMenu()
 	{
 
 	}break;
-	case 3://高手排行榜
+	case 3://排行榜
 	{
 
 	}break;
