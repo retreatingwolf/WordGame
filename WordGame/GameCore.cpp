@@ -81,7 +81,7 @@ void GameCore::LogicUpdate()
 		
 		//（以下二者的刷新会很复杂，考虑封装一个方法来实现）
 		// 遍历地铁站列表
-		for (auto station : *world->GetStations())
+		for (Station* station : *world->GetStations())
 		{
 			//刷新黑市商品
 			this->UpdateMarketList(station->GetBlackMarket());

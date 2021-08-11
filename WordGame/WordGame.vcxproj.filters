@@ -105,6 +105,15 @@
     <ClCompile Include="HouseView.cpp">
       <Filter>源文件\View</Filter>
     </ClCompile>
+    <ClCompile Include="FurnitureShop.cpp">
+      <Filter>源文件\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="FurnitureShopView.cpp">
+      <Filter>源文件\View</Filter>
+    </ClCompile>
+    <ClCompile Include="FurnitureShopGood.cpp">
+      <Filter>源文件\Model</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BlackMarket.h">
@@ -172,6 +181,15 @@
     </ClInclude>
     <ClInclude Include="HouseView.h">
       <Filter>头文件\View</Filter>
+    </ClInclude>
+    <ClInclude Include="FurnitureShop.h">
+      <Filter>头文件\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="FurnitureShopView.h">
+      <Filter>头文件\View</Filter>
+    </ClInclude>
+    <ClInclude Include="FurnitureShopGood.h">
+      <Filter>头文件\Model</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

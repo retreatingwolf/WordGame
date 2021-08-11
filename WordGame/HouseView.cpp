@@ -31,7 +31,7 @@ void HouseView::ShowHouse()
 	{
 	case NO_BED:title = "您进入了家，看着空荡荡的房间，长叹一口气"; break;
 	case RICE_STRAW_BED:title = "您进入了家，看着扎人的稻草床，长叹一口气"; break;
-	case SECON_DHAND_BED:title = "您进入了家，看着破旧的木板床，长叹一口气"; break;
+	case SECOND_HAND_BED:title = "您进入了家，看着破旧的木板床，长叹一口气"; break;
 	}
 
 	switch (Viewer::ChooseMenuItem(title, items))
@@ -56,7 +56,7 @@ void HouseView::ShowHouse()
 		{
 		case NO_BED:title = "您在地板上凑和了一夜"; break;
 		case RICE_STRAW_BED:title = "稻草不够舒适，但至少算是一张床"; break;
-		case SECON_DHAND_BED:title = "床会在您翻身时嘎吱嘎吱响"; break;
+		case SECOND_HAND_BED:title = "床会在您翻身时嘎吱嘎吱响"; break;
 		}
 		cout << title << endl;
 		Sleep(2000);

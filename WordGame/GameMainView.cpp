@@ -3,6 +3,7 @@
 #include "StationView.h"
 #include "BankView.h"
 #include "HouseView.h"
+#include "FurnitureShopView.h"
 
 GameMainView::GameMainView()
 {
@@ -62,7 +63,9 @@ void GameMainView::ShowFuncChoice()
 	}break;
 	case 6://¼Ò¾ß³Ç
 	{
-
+		FurnitureShopView* furnitureShopView = new FurnitureShopView();
+		furnitureShopView->Show();
+		delete furnitureShopView;
 	}break;
 	case 7://Íø°É
 	{

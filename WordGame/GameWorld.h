@@ -7,6 +7,7 @@
 #include "Message.h"
 #include "Bank.h"
 #include "House.h"
+#include "FurnitureShop.h"
 
 #include <vector>
 #include <map>
@@ -35,6 +36,8 @@ public:
 	Bank* GetBank();
 	//获取出租屋
 	House* GetHouse();
+	//获取家具城
+	FurnitureShop* GetFurnitureShop();
 	//获取所有游戏场景
 	vector<GamePlace*>* GetGamePlaces() { return &this->prt_places; }
 	//获取所有的游戏物品
@@ -68,6 +71,8 @@ private:
 	Bank* prt_bank;
 	//出租屋
 	House* prt_house;
+	//家具城
+	FurnitureShop* prt_furnitureShop;
 	//事件的集合
 	map<int, Message*> prt_messages;
 	//记录当前触发的消息

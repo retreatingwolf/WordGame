@@ -10,6 +10,7 @@ GameWorld::GameWorld()
 	this->prt_role = nullptr;
 	this->prt_bank = nullptr;
 	this->prt_house = nullptr;
+	this->prt_furnitureShop = nullptr;
 
 	/*初始化游戏场景*/
 	string placeNames[] = { "地铁站","银行","邮局","医院","机场","家具城","网吧","出租屋" };
@@ -124,4 +125,13 @@ House* GameWorld::GetHouse()
 		this->prt_house = new House();
 	}
 	return this->prt_house;
+}
+
+FurnitureShop* GameWorld::GetFurnitureShop()
+{
+	if (this->prt_furnitureShop == nullptr)
+	{
+		this->prt_furnitureShop = new FurnitureShop();
+	}
+	return this->prt_furnitureShop;
 }

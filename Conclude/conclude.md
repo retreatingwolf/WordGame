@@ -70,3 +70,4 @@ mciSendString(cmd.str().c_str(), 0, 0, NULL);
 ## BUG
 
 1. 第一天就存在利息
+2.  家具城买床后第二天不扣健康值，第三天开始扣
