@@ -114,6 +114,12 @@
     <ClCompile Include="FurnitureShopGood.cpp">
       <Filter>源文件\Model</Filter>
     </ClCompile>
+    <ClCompile Include="HospitalView.cpp">
+      <Filter>源文件\View</Filter>
+    </ClCompile>
+    <ClCompile Include="Hospital.cpp">
+      <Filter>源文件\Model</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BlackMarket.h">
@@ -189,6 +195,12 @@
       <Filter>头文件\View</Filter>
     </ClInclude>
     <ClInclude Include="FurnitureShopGood.h">
+      <Filter>头文件\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="HospitalView.h">
+      <Filter>头文件\View</Filter>
+    </ClInclude>
+    <ClInclude Include="Hospital.h">
       <Filter>头文件\Model</Filter>
     </ClInclude>
   </ItemGroup>

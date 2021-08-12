@@ -158,6 +158,8 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="GameWorld.cpp" />
+    <ClCompile Include="Hospital.cpp" />
+    <ClCompile Include="HospitalView.cpp" />
     <ClCompile Include="House.cpp" />
     <ClCompile Include="HouseView.cpp" />
     <ClCompile Include="MarketView.cpp" />
@@ -189,6 +191,8 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="GameWorld.h" />
+    <ClInclude Include="Hospital.h" />
+    <ClInclude Include="HospitalView.h" />
     <ClInclude Include="House.h" />
     <ClInclude Include="HouseView.h" />
     <ClInclude Include="MarketView.h" />

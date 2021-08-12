@@ -4,6 +4,7 @@
 #include "BankView.h"
 #include "HouseView.h"
 #include "FurnitureShopView.h"
+#include "HospitalView.h"
 
 GameMainView::GameMainView()
 {
@@ -55,7 +56,9 @@ void GameMainView::ShowFuncChoice()
 	}break;
 	case 4://医院
 	{
-
+		HospitalView* hospitalView = new HospitalView();
+		hospitalView->Show();
+		delete hospitalView;
 	}break;
 	case 5://机场
 	{

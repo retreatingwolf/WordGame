@@ -11,6 +11,7 @@ GameWorld::GameWorld()
 	this->prt_bank = nullptr;
 	this->prt_house = nullptr;
 	this->prt_furnitureShop = nullptr;
+	this->prt_hospital = nullptr;
 
 	/*初始化游戏场景*/
 	string placeNames[] = { "地铁站","银行","邮局","医院","机场","家具城","网吧","出租屋" };
@@ -88,6 +89,31 @@ GameWorld::~GameWorld()
 		delete this->prt_role;
 		this->prt_role = nullptr;
 	}
+	if (this->prt_bank != nullptr)
+	{
+		delete this->prt_bank;
+		this->prt_bank = nullptr;
+	}
+	if (this->prt_house != nullptr)
+	{
+		delete this->prt_house;
+		this->prt_house = nullptr;
+	}
+	if (this->prt_furnitureShop != nullptr)
+	{
+		delete this->prt_furnitureShop;
+		this->prt_furnitureShop = nullptr;
+	}
+	if (this->prt_hospital != nullptr)
+	{
+		delete this->prt_hospital;
+		this->prt_hospital = nullptr;
+	}
+	if (this->prt_hospital != nullptr)
+	{
+		delete this->prt_hospital;
+		this->prt_hospital = nullptr;
+	}
 	cout << "GameWorld的析构函数调用" << endl;
 }
 
@@ -134,4 +160,13 @@ FurnitureShop* GameWorld::GetFurnitureShop()
 		this->prt_furnitureShop = new FurnitureShop();
 	}
 	return this->prt_furnitureShop;
+}
+
+Hospital* GameWorld::GetHospital()
+{
+	if (this->prt_hospital == nullptr)
+	{
+		this->prt_hospital = new Hospital();
+	}
+	return this->prt_hospital;
 }
